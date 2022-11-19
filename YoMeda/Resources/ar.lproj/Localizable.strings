@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  YoMeda
+
+  Created by Ahmed Hussien on 21/10/2022.
+  
+*/
+"addـcart" = "اضف للقائمة";
+"search" = "بحث";
+"ok" = "موفق";
+"Cancel" = "الغاء";
+"device need restart" = "الجهاز يحتاج الي اعادة تشغل";
+"confirmation" = "تاكيد الطلب";
+"cart" = "السلة";
+
+"do" = "تنفيذ";
+"products X" = " X المنتجات";
+"delivery fee" = "رسوم التوصيل";
+"varies by region" = "تختلف حسب المنطقة";
+"product pricesmay vary in different pharmacies" = "اسعار المنتجات قد تختلف بإختلاف الصيدليات";
+"Are you sure?" = "هل انت متاكد";
+"You will remove this item from the cart" = "ستقوم بحزف العنصر من السلة";
+"alert" = "تحزير";
+"Confirm" = "تآكيد";
+"cancel" = "الغاء";

@@ -1,0 +1,622 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E271F496179CE1830E0C790E /* Pods_YoMeda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D88BE01EEA0062879A16BB /* Pods_YoMeda.framework */; };
+		FC54BEA12916280B00F7CE8E /* CoreDataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC54BEA02916280B00F7CE8E /* CoreDataManger.swift */; };
+		FC54BEA42916350400F7CE8E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC54BEA32916350400F7CE8E /* Alert.swift */; };
+		FC54BEA629164DAD00F7CE8E /* CalcTotal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC54BEA529164DAD00F7CE8E /* CalcTotal.swift */; };
+		FC7786122902EACA00E1A363 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7786112902EACA00E1A363 /* AppDelegate.swift */; };
+		FC7786142902EACA00E1A363 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7786132902EACA00E1A363 /* SceneDelegate.swift */; };
+		FC7786162902EACA00E1A363 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7786152902EACA00E1A363 /* ViewController.swift */; };
+		FC7786192902EACA00E1A363 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC7786172902EACA00E1A363 /* Main.storyboard */; };
+		FC77861C2902EACA00E1A363 /* YoMeda.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC77861A2902EACA00E1A363 /* YoMeda.xcdatamodeld */; };
+		FC77861E2902EACD00E1A363 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC77861D2902EACD00E1A363 /* Assets.xcassets */; };
+		FC7786212902EACD00E1A363 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC77861F2902EACD00E1A363 /* LaunchScreen.storyboard */; };
+		FC7786292902ED1100E1A363 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7786282902ED1100E1A363 /* SplashController.swift */; };
+		FC77862B2903020E00E1A363 /* UiExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC77862A2903020D00E1A363 /* UiExtention.swift */; };
+		FC77863529033F2200E1A363 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC77863729033F2200E1A363 /* Localizable.strings */; };
+		FC77863A29033F8900E1A363 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC77863929033F8900E1A363 /* ProductCell.swift */; };
+		FC77863E290342F100E1A363 /* LocalizationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC77863D290342F100E1A363 /* LocalizationSystem.swift */; };
+		FCD441692903E49700CBCC18 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD441682903E49700CBCC18 /* File.swift */; };
+		FCD4416E2903FAC700CBCC18 /* Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4416D2903FAC700CBCC18 /* Url.swift */; };
+		FCD441702903FC9C00CBCC18 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4416F2903FC9C00CBCC18 /* NetworkManager.swift */; };
+		FCD441732903FECD00CBCC18 /* ProductVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD441722903FECD00CBCC18 /* ProductVM.swift */; };
+		FCD441762904415A00CBCC18 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FCD441752904415A00CBCC18 /* Kingfisher */; };
+		FCD50A322904F4B700E4BF7C /* cartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD50A312904F4B700E4BF7C /* cartCell.swift */; };
+		FCD50A372904F50500E4BF7C /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD50A362904F50500E4BF7C /* CartVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		14D88BE01EEA0062879A16BB /* Pods_YoMeda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoMeda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33B87E25DF6C717625270E6A /* Pods-YoMeda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoMeda.debug.xcconfig"; path = "Target Support Files/Pods-YoMeda/Pods-YoMeda.debug.xcconfig"; sourceTree = "<group>"; };
+		82546CA0E7F0A3DD60E7D564 /* Pods-YoMeda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoMeda.release.xcconfig"; path = "Target Support Files/Pods-YoMeda/Pods-YoMeda.release.xcconfig"; sourceTree = "<group>"; };
+		FC54BEA02916280B00F7CE8E /* CoreDataManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManger.swift; sourceTree = "<group>"; };
+		FC54BEA32916350400F7CE8E /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		FC54BEA529164DAD00F7CE8E /* CalcTotal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcTotal.swift; sourceTree = "<group>"; };
+		FC77860E2902EACA00E1A363 /* YoMeda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoMeda.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC7786112902EACA00E1A363 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FC7786132902EACA00E1A363 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FC7786152902EACA00E1A363 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FC7786182902EACA00E1A363 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC77861B2902EACA00E1A363 /* YoMeda.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YoMeda.xcdatamodel; sourceTree = "<group>"; };
+		FC77861D2902EACD00E1A363 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC7786202902EACD00E1A363 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FC7786222902EACE00E1A363 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC7786282902ED1100E1A363 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
+		FC77862A2903020D00E1A363 /* UiExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiExtention.swift; sourceTree = "<group>"; };
+		FC77863129033E8C00E1A363 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		FC77863229033E8C00E1A363 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		FC77863629033F2200E1A363 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FC77863829033F2600E1A363 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FC77863929033F8900E1A363 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		FC77863D290342F100E1A363 /* LocalizationSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationSystem.swift; sourceTree = "<group>"; };
+		FCD441682903E49700CBCC18 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		FCD4416D2903FAC700CBCC18 /* Url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Url.swift; sourceTree = "<group>"; };
+		FCD4416F2903FC9C00CBCC18 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FCD441722903FECD00CBCC18 /* ProductVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductVM.swift; sourceTree = "<group>"; };
+		FCD50A312904F4B700E4BF7C /* cartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cartCell.swift; sourceTree = "<group>"; };
+		FCD50A362904F50500E4BF7C /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC77860B2902EACA00E1A363 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCD441762904415A00CBCC18 /* Kingfisher in Frameworks */,
+				E271F496179CE1830E0C790E /* Pods_YoMeda.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		44FBC9C52DCC9395E90B2724 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				33B87E25DF6C717625270E6A /* Pods-YoMeda.debug.xcconfig */,
+				82546CA0E7F0A3DD60E7D564 /* Pods-YoMeda.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E550A5C33F2D330A82F29880 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14D88BE01EEA0062879A16BB /* Pods_YoMeda.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC54BE9F2916268400F7CE8E /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				FC77862A2903020D00E1A363 /* UiExtention.swift */,
+				FC54BEA32916350400F7CE8E /* Alert.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		FC7786052902EACA00E1A363 = {
+			isa = PBXGroup;
+			children = (
+				FC7786102902EACA00E1A363 /* YoMeda */,
+				FC77860F2902EACA00E1A363 /* Products */,
+				44FBC9C52DCC9395E90B2724 /* Pods */,
+				E550A5C33F2D330A82F29880 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FC77860F2902EACA00E1A363 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC77860E2902EACA00E1A363 /* YoMeda.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC7786102902EACA00E1A363 /* YoMeda */ = {
+			isa = PBXGroup;
+			children = (
+				FC54BE9F2916268400F7CE8E /* Extentions */,
+				FC77862E29033D4600E1A363 /* Resources */,
+				FCD4416C2903FAAD00CBCC18 /* Newtwork */,
+				FCD441672903E48400CBCC18 /* Model */,
+				FCD441712903FE9500CBCC18 /* ViewModel */,
+				FC77863029033D7800E1A363 /* Controllers */,
+				FC77862F29033D5E00E1A363 /* Views */,
+				FC7786222902EACE00E1A363 /* Info.plist */,
+				FC77861A2902EACA00E1A363 /* YoMeda.xcdatamodeld */,
+			);
+			path = YoMeda;
+			sourceTree = "<group>";
+		};
+		FC77862E29033D4600E1A363 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FC77861D2902EACD00E1A363 /* Assets.xcassets */,
+				FC77863729033F2200E1A363 /* Localizable.strings */,
+				FC77863D290342F100E1A363 /* LocalizationSystem.swift */,
+				FC7786132902EACA00E1A363 /* SceneDelegate.swift */,
+				FC7786112902EACA00E1A363 /* AppDelegate.swift */,
+				FC54BEA02916280B00F7CE8E /* CoreDataManger.swift */,
+				FC54BEA529164DAD00F7CE8E /* CalcTotal.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FC77862F29033D5E00E1A363 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FC77861F2902EACD00E1A363 /* LaunchScreen.storyboard */,
+				FC7786172902EACA00E1A363 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FC77863029033D7800E1A363 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FCD50A342904F4D300E4BF7C /* search */,
+				FCD50A332904F4C600E4BF7C /* cart */,
+				FC7786282902ED1100E1A363 /* SplashController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FCD441672903E48400CBCC18 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FCD441682903E49700CBCC18 /* File.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FCD4416C2903FAAD00CBCC18 /* Newtwork */ = {
+			isa = PBXGroup;
+			children = (
+				FCD4416D2903FAC700CBCC18 /* Url.swift */,
+				FCD4416F2903FC9C00CBCC18 /* NetworkManager.swift */,
+			);
+			path = Newtwork;
+			sourceTree = "<group>";
+		};
+		FCD441712903FE9500CBCC18 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FCD441722903FECD00CBCC18 /* ProductVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FCD50A332904F4C600E4BF7C /* cart */ = {
+			isa = PBXGroup;
+			children = (
+				FCD50A362904F50500E4BF7C /* CartVC.swift */,
+				FCD50A312904F4B700E4BF7C /* cartCell.swift */,
+			);
+			path = cart;
+			sourceTree = "<group>";
+		};
+		FCD50A342904F4D300E4BF7C /* search */ = {
+			isa = PBXGroup;
+			children = (
+				FC7786152902EACA00E1A363 /* ViewController.swift */,
+				FC77863929033F8900E1A363 /* ProductCell.swift */,
+			);
+			path = search;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC77860D2902EACA00E1A363 /* YoMeda */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC7786252902EACE00E1A363 /* Build configuration list for PBXNativeTarget "YoMeda" */;
+			buildPhases = (
+				392316FE839091D66BC9FC6D /* [CP] Check Pods Manifest.lock */,
+				FC77860A2902EACA00E1A363 /* Sources */,
+				FC77860B2902EACA00E1A363 /* Frameworks */,
+				FC77860C2902EACA00E1A363 /* Resources */,
+				75CCE30FAEDBBCF363408B7C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YoMeda;
+			packageProductDependencies = (
+				FCD441752904415A00CBCC18 /* Kingfisher */,
+			);
+			productName = YoMeda;
+			productReference = FC77860E2902EACA00E1A363 /* YoMeda.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC7786062902EACA00E1A363 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					FC77860D2902EACA00E1A363 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+				};
+			};
+			buildConfigurationList = FC7786092902EACA00E1A363 /* Build configuration list for PBXProject "YoMeda" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ar,
+			);
+			mainGroup = FC7786052902EACA00E1A363;
+			packageReferences = (
+				FCD441742904415A00CBCC18 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
+			productRefGroup = FC77860F2902EACA00E1A363 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC77860D2902EACA00E1A363 /* YoMeda */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC77860C2902EACA00E1A363 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC7786212902EACD00E1A363 /* LaunchScreen.storyboard in Resources */,
+				FC77863529033F2200E1A363 /* Localizable.strings in Resources */,
+				FC77861E2902EACD00E1A363 /* Assets.xcassets in Resources */,
+				FC7786192902EACA00E1A363 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		392316FE839091D66BC9FC6D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YoMeda-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75CCE30FAEDBBCF363408B7C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YoMeda/Pods-YoMeda-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YoMeda/Pods-YoMeda-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YoMeda/Pods-YoMeda-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC77860A2902EACA00E1A363 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCD441702903FC9C00CBCC18 /* NetworkManager.swift in Sources */,
+				FC77862B2903020E00E1A363 /* UiExtention.swift in Sources */,
+				FCD50A372904F50500E4BF7C /* CartVC.swift in Sources */,
+				FC77863E290342F100E1A363 /* LocalizationSystem.swift in Sources */,
+				FC7786162902EACA00E1A363 /* ViewController.swift in Sources */,
+				FC7786122902EACA00E1A363 /* AppDelegate.swift in Sources */,
+				FC77861C2902EACA00E1A363 /* YoMeda.xcdatamodeld in Sources */,
+				FC7786142902EACA00E1A363 /* SceneDelegate.swift in Sources */,
+				FCD50A322904F4B700E4BF7C /* cartCell.swift in Sources */,
+				FC77863A29033F8900E1A363 /* ProductCell.swift in Sources */,
+				FC54BEA12916280B00F7CE8E /* CoreDataManger.swift in Sources */,
+				FCD4416E2903FAC700CBCC18 /* Url.swift in Sources */,
+				FCD441692903E49700CBCC18 /* File.swift in Sources */,
+				FCD441732903FECD00CBCC18 /* ProductVM.swift in Sources */,
+				FC54BEA42916350400F7CE8E /* Alert.swift in Sources */,
+				FC7786292902ED1100E1A363 /* SplashController.swift in Sources */,
+				FC54BEA629164DAD00F7CE8E /* CalcTotal.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FC7786172902EACA00E1A363 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC7786182902EACA00E1A363 /* Base */,
+				FC77863229033E8C00E1A363 /* ar */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FC77861F2902EACD00E1A363 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC7786202902EACD00E1A363 /* Base */,
+				FC77863129033E8C00E1A363 /* ar */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FC77863729033F2200E1A363 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC77863629033F2200E1A363 /* ar */,
+				FC77863829033F2600E1A363 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FC7786232902EACE00E1A363 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FC7786242902EACE00E1A363 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC7786262902EACE00E1A363 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33B87E25DF6C717625270E6A /* Pods-YoMeda.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DMQW7G8DCY;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YoMeda/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ahmed.com.YoMeda;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC7786272902EACE00E1A363 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82546CA0E7F0A3DD60E7D564 /* Pods-YoMeda.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DMQW7G8DCY;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YoMeda/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ahmed.com.YoMeda;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC7786092902EACA00E1A363 /* Build configuration list for PBXProject "YoMeda" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC7786232902EACE00E1A363 /* Debug */,
+				FC7786242902EACE00E1A363 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC7786252902EACE00E1A363 /* Build configuration list for PBXNativeTarget "YoMeda" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC7786262902EACE00E1A363 /* Debug */,
+				FC7786272902EACE00E1A363 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FCD441742904415A00CBCC18 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FCD441752904415A00CBCC18 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FCD441742904415A00CBCC18 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		FC77861A2902EACA00E1A363 /* YoMeda.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FC77861B2902EACA00E1A363 /* YoMeda.xcdatamodel */,
+			);
+			currentVersion = FC77861B2902EACA00E1A363 /* YoMeda.xcdatamodel */;
+			path = YoMeda.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FC7786062902EACA00E1A363 /* Project object */;
+}

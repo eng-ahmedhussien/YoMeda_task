@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  YoMeda
+
+  Created by Ahmed Hussien on 21/10/2022.
+  
+*/
+
+"addـcart" = "add cart";
+"search" = "search";
+"ok" = "ok";
+"Cancel" = "Cancel";
+"device need restart" = "device need restart";
+"confirmation" = "confirmation";
+"cart" = "cart";
+
+"do" = "do";
+"products X" = "products X";
+"delivery fee" = "delivery fee";
+"varies by region" = "varies by region";
+"product pricesmay vary in different pharmacies" = "product pricesmay vary in different pharmacies";
+
+"Are you sure?" = "Are you sure?";
+"You will remove this item from the cart" = "You will remove this item from the cart";
+"alert" = "alert";
+"Confirm" = "Confirm";
+"cancel" = "cancel";

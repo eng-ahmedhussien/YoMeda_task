@@ -1,0 +1,15 @@
+
+/* Class = "UINavigationItem"; title = "البحث"; ObjectID = "7Lg-tc-UPQ"; */
+"7Lg-tc-UPQ.title" = "البحث";
+
+/* Class = "UILabel"; text = "name"; ObjectID = "bZD-Hn-L1N"; */
+"bZD-Hn-L1N.text" = "name";
+
+/* Class = "UIButton"; configuration.title = "add cart"; ObjectID = "kv3-M6-GPa"; */
+"kv3-M6-GPa.configuration.title" = "add cart";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "kv3-M6-GPa"; */
+"kv3-M6-GPa.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "price"; ObjectID = "nJF-Dn-1GH"; */
+"nJF-Dn-1GH.text" = "price";
