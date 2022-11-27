@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SearchVC: UIViewController {
 
     @IBOutlet weak var searchBare: UISearchBar!
     @IBOutlet weak var productsTable: UITableView!{
@@ -19,7 +19,6 @@ class ViewController: UIViewController {
     }
     @IBOutlet weak var languageButton: UIBarButtonItem!
     @IBOutlet weak var confirmView: UIView!
-    
     @IBOutlet weak var confirmbutton: UIButton!
     @IBOutlet weak var totalPriceInSearch: UILabel!
     @IBOutlet weak var productQuantity: UILabel!
@@ -80,7 +79,7 @@ class ViewController: UIViewController {
 }
 
 // MARK: - tabll
-extension ViewController: UITableViewDelegate,UITableViewDataSource {
+extension SearchVC: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrayOfproducts.count
@@ -187,7 +186,7 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
     
 }
 // MARK: -searchbar
-extension ViewController:UISearchBarDelegate{
+extension SearchVC:UISearchBarDelegate{
 
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
 
@@ -206,7 +205,7 @@ extension ViewController:UISearchBarDelegate{
         else{
             let ProductViewModel = ProductVM()
             ProductViewModel.fetchData(searchkey: searchText)
-            ProductViewModel.updateData = { products , error in
+            ProductViewModel.bindingData = { products , error in
                 if let products = products{
                     self.arrayOfproducts = products
                     self.confirmView.isHidden = CoreDataManager.sharedInstance.isCartEmpty() ? true:false

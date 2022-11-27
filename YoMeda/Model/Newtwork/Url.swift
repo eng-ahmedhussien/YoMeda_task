@@ -23,3 +23,10 @@ struct Url {
     }
 
 }
+struct UrlServices {
+    var endPoint: String = ""
+    var URL : String{
+        return "http://40.127.194.127:5656/Salamtak/GetMedicationItems\(endPoint)"
+    }
+
+}

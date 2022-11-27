@@ -39,7 +39,6 @@ class cartCell: UITableViewCell {
         let  placeimage = UIImage(named:"product-placeholder-wp")
         productImage.kf.setImage(with: url,placeholder: placeimage)
         
-        
         addItemQuantity = {
             cell.quantity  = "\(Double((cell.quantity)!)!+1)"
             try? context.save()

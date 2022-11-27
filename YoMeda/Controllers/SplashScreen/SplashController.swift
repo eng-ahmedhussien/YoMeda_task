@@ -13,7 +13,7 @@ class SplashController: UIViewController {
         super.viewDidLoad()
 
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
-            let toHomeView = self.storyboard?.instantiateViewController(identifier:"ViewController") as? ViewController
+            let toHomeView = self.storyboard?.instantiateViewController(identifier:"SearchVC") as? SearchVC
             let nav = UINavigationController(rootViewController: toHomeView!)
             nav.modalPresentationStyle = .fullScreen
             self.present(nav, animated: true, completion: nil)

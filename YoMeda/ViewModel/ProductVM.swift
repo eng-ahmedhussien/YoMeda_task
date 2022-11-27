@@ -13,16 +13,16 @@ class ProductVM{
     //MARK: - network functions
     var productsArray: [Complaint]? {
         didSet{
-            updateData(productsArray, nil)
+            bindingData(productsArray, nil)
         }
     }
     var error: Error? {
         didSet {
-            updateData(nil, error)
+            bindingData(nil, error)
         }
     }
     let ApiService: NetworkManager
-    var updateData : (([Complaint]?,Error?) -> Void) = {_ , _ in}
+    var bindingData : (([Complaint]?,Error?) -> Void) = {_ , _ in}
     init(ApiService: NetworkManager = NetworkManager()) {
         self.ApiService = ApiService
     }

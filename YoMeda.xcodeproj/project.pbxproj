@@ -13,7 +13,7 @@
 		FC54BEA629164DAD00F7CE8E /* CalcTotal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC54BEA529164DAD00F7CE8E /* CalcTotal.swift */; };
 		FC7786122902EACA00E1A363 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7786112902EACA00E1A363 /* AppDelegate.swift */; };
 		FC7786142902EACA00E1A363 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7786132902EACA00E1A363 /* SceneDelegate.swift */; };
-		FC7786162902EACA00E1A363 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7786152902EACA00E1A363 /* ViewController.swift */; };
+		FC7786162902EACA00E1A363 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7786152902EACA00E1A363 /* SearchVC.swift */; };
 		FC7786192902EACA00E1A363 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC7786172902EACA00E1A363 /* Main.storyboard */; };
 		FC77861C2902EACA00E1A363 /* YoMeda.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC77861A2902EACA00E1A363 /* YoMeda.xcdatamodeld */; };
 		FC77861E2902EACD00E1A363 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC77861D2902EACD00E1A363 /* Assets.xcassets */; };
@@ -42,7 +42,7 @@
 		FC77860E2902EACA00E1A363 /* YoMeda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoMeda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7786112902EACA00E1A363 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC7786132902EACA00E1A363 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FC7786152902EACA00E1A363 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FC7786152902EACA00E1A363 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		FC7786182902EACA00E1A363 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC77861B2902EACA00E1A363 /* YoMeda.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YoMeda.xcdatamodel; sourceTree = "<group>"; };
 		FC77861D2902EACD00E1A363 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,6 +94,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FC37EFCE29335C5B00090F5A /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FC7786282902ED1100E1A363 /* SplashController.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
 		FC54BE9F2916268400F7CE8E /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,7 +134,6 @@
 			children = (
 				FC54BE9F2916268400F7CE8E /* Extentions */,
 				FC77862E29033D4600E1A363 /* Resources */,
-				FCD4416C2903FAAD00CBCC18 /* Newtwork */,
 				FCD441672903E48400CBCC18 /* Model */,
 				FCD441712903FE9500CBCC18 /* ViewModel */,
 				FC77863029033D7800E1A363 /* Controllers */,
@@ -163,9 +170,9 @@
 		FC77863029033D7800E1A363 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FCD50A342904F4D300E4BF7C /* search */,
-				FCD50A332904F4C600E4BF7C /* cart */,
-				FC7786282902ED1100E1A363 /* SplashController.swift */,
+				FC37EFCE29335C5B00090F5A /* SplashScreen */,
+				FCD50A342904F4D300E4BF7C /* searchScreen */,
+				FCD50A332904F4C600E4BF7C /* CartScreen */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -174,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				FCD441682903E49700CBCC18 /* File.swift */,
+				FCD4416C2903FAAD00CBCC18 /* Newtwork */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -195,22 +203,22 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		FCD50A332904F4C600E4BF7C /* cart */ = {
+		FCD50A332904F4C600E4BF7C /* CartScreen */ = {
 			isa = PBXGroup;
 			children = (
 				FCD50A362904F50500E4BF7C /* CartVC.swift */,
 				FCD50A312904F4B700E4BF7C /* cartCell.swift */,
 			);
-			path = cart;
+			path = CartScreen;
 			sourceTree = "<group>";
 		};
-		FCD50A342904F4D300E4BF7C /* search */ = {
+		FCD50A342904F4D300E4BF7C /* searchScreen */ = {
 			isa = PBXGroup;
 			children = (
-				FC7786152902EACA00E1A363 /* ViewController.swift */,
+				FC7786152902EACA00E1A363 /* SearchVC.swift */,
 				FC77863929033F8900E1A363 /* ProductCell.swift */,
 			);
-			path = search;
+			path = searchScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,7 +348,7 @@
 				FC77862B2903020E00E1A363 /* UiExtention.swift in Sources */,
 				FCD50A372904F50500E4BF7C /* CartVC.swift in Sources */,
 				FC77863E290342F100E1A363 /* LocalizationSystem.swift in Sources */,
-				FC7786162902EACA00E1A363 /* ViewController.swift in Sources */,
+				FC7786162902EACA00E1A363 /* SearchVC.swift in Sources */,
 				FC7786122902EACA00E1A363 /* AppDelegate.swift in Sources */,
 				FC77861C2902EACA00E1A363 /* YoMeda.xcdatamodeld in Sources */,
 				FC7786142902EACA00E1A363 /* SceneDelegate.swift in Sources */,
