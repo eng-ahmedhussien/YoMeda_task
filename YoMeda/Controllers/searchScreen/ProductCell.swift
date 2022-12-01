@@ -7,7 +7,7 @@
 
 import UIKit
 import Kingfisher
-
+import Combine
 
 class ProductCell: UITableViewCell {
 
@@ -20,6 +20,7 @@ class ProductCell: UITableViewCell {
     
     let productVM = ProductVM()
     var product : Complaint?
+    //let addItemQuantity = PassthroughSubject<String,Never>()
     var addItemQuantity : (()->())?
     var subItemQuantity : (()->())?
     var fristAddItemToCart : (()->())?
@@ -43,6 +44,7 @@ class ProductCell: UITableViewCell {
     
     @IBAction func plusButton(_ sender: UIButton) {
         addItemQuantity?()
+      //  addItemQuantity.send("add")
     }
     
     @IBAction func minusButton(_ sender: Any) {

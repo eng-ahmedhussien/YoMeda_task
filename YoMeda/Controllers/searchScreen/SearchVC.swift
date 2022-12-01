@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class SearchVC: UIViewController {
 
@@ -15,6 +16,7 @@ class SearchVC: UIViewController {
             productsTable.delegate = self
             productsTable.dataSource = self
             productsTable.rowHeight = 161
+           
         }
     }
     @IBOutlet weak var languageButton: UIBarButtonItem!
@@ -27,14 +29,15 @@ class SearchVC: UIViewController {
     let productVM = ProductVM()
     let calcTotal = CalcTotal()
     
+    var observer : AnyCancellable?
+    var observers : [AnyCancellable] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       // setupTable()
         setupChangeLanguageButton()
         searchBare.delegate = self
         confirmView.isHidden = true
-        //productVM.calcTotalPrice()
-         calcTotal.calcTotalPrice()
+        calcTotal.calcTotalPrice()
         title = "search".localized
         confirmbutton.setTitle("confirmation".localized, for: .normal)
     }
@@ -43,11 +46,7 @@ class SearchVC: UIViewController {
         totalPriceInSearch.text = "\(UserDefaults.standard.double(forKey: "TotalPrice"))"
         productQuantity.text =  "\(UserDefaults.standard.double(forKey: "TotalQuantity"))"
     }
-    func setupTable(){
-        productsTable.delegate = self
-        productsTable.dataSource = self
-        productsTable.rowHeight = 161
-    }
+
     func setupChangeLanguageButton(){
         let AR = UIAction(title: "Arabic"){ _ in
             self.creatAlert(title: "alert".localized, message: "device need restart".localized)
@@ -106,10 +105,8 @@ extension SearchVC: UITableViewDelegate,UITableViewDataSource {
                     selectedItem?.quantity  = "\(Double((selectedItem?.quantity)!)!)"
                 }
                 try? context.save()
-                //self.productVM.calcTotalPrice()
                 self.calcTotal.calcTotalPrice()
                 self.totalPriceInSearch.text = "\(UserDefaults.standard.double(forKey: "TotalPrice"))"
-               // self.productVM.calcTotalQuantity()
                 self.calcTotal.calcTotalQuantity()
                 self.productQuantity.text =  "\(UserDefaults.standard.double(forKey: "TotalQuantity"))"
             }
@@ -117,7 +114,7 @@ extension SearchVC: UITableViewDelegate,UITableViewDataSource {
             self.productsTable.reloadData()
         }
         
-        cell!.addItemQuantity = {
+       cell!.addItemQuantity = {
             CoreDataManager.sharedInstance.getSelectedItemFromCart(product: self.arrayOfproducts[indexPath.row]) { selectedItem, error in
                 if selectedItem != nil {
                     selectedItem?.quantity  = "\(Double((selectedItem?.quantity)!)!+1)"
@@ -125,7 +122,7 @@ extension SearchVC: UITableViewDelegate,UITableViewDataSource {
                 try? context.save()
                // self.productVM.calcTotalPrice()
                 self.calcTotal.calcTotalPrice()
-               
+
                 self.totalPriceInSearch.text = "\(UserDefaults.standard.double(forKey: "TotalPrice"))"
                 //self.productVM.calcTotalQuantity()
                 self.calcTotal.calcTotalQuantity()
@@ -142,11 +139,10 @@ extension SearchVC: UITableViewDelegate,UITableViewDataSource {
 //                self.productQuantity.text =  "\(UserDefaults.standard.double(forKey: "TotalQuantity"))"
 //            }
             self.productsTable.reloadData()
-            
+
         }
-        
+
         cell!.subItemQuantity = {
-            
             CoreDataManager.sharedInstance.getSelectedItemFromCart(product: self.arrayOfproducts[indexPath.row]) { selectedItem, error in
                 if selectedItem != nil {
                     if (Double((selectedItem?.quantity)!)!) == 1{}
@@ -155,27 +151,11 @@ extension SearchVC: UITableViewDelegate,UITableViewDataSource {
                     }
                 }
                 try? context.save()
-                //self.productVM.calcTotalPrice()
                 self.calcTotal.calcTotalPrice()
                 self.totalPriceInSearch.text = "\(UserDefaults.standard.double(forKey: "TotalPrice"))"
-               // self.productVM.calcTotalQuantity()
                 self.calcTotal.calcTotalQuantity()
                 self.productQuantity.text =  "\(UserDefaults.standard.double(forKey: "TotalQuantity"))"
             }
-            
-//            self.productVM.getSelectedItemFromCart(product: self.arrayOfproducts[indexPath.row]) { selectedItem, error in
-//                if selectedItem != nil {
-//                    if (Double((selectedItem?.quantity)!)!) == 1{}
-//                    else{
-//                        selectedItem?.quantity  = "\( Double((selectedItem?.quantity)!)!-1 )"
-//                    }
-//                }
-//                try? context.save()
-//                self.productVM.calcTotalPrice()
-//                self.totalPriceInSearch.text = "\(UserDefaults.standard.double(forKey: "TotalPrice"))"
-//                self.productVM.calcTotalQuantity()
-//                self.productQuantity.text =  "\(UserDefaults.standard.double(forKey: "TotalQuantity"))"
-//            }
             self.productsTable.reloadData()
         }
         
@@ -204,17 +184,30 @@ extension SearchVC:UISearchBarDelegate{
         }
         else{
             let ProductViewModel = ProductVM()
-            ProductViewModel.fetchData(searchkey: searchText)
-            ProductViewModel.bindingData = { products , error in
-                if let products = products{
-                    self.arrayOfproducts = products
-                    self.confirmView.isHidden = CoreDataManager.sharedInstance.isCartEmpty() ? true:false
-                    self.productsTable.reloadData()
+//            ProductViewModel.fetchData(searchkey: searchText)
+//            ProductViewModel.bindingData = { products , error in
+//                if let products = products{
+//                    self.arrayOfproducts = products
+//                    self.confirmView.isHidden = CoreDataManager.sharedInstance.isCartEmpty() ? true:false
+//                    self.productsTable.reloadData()
+//                }
+//                if let error = error {
+//                    print(error)
+//                }
+//            }
+            //combine
+            ProductViewModel.fetchData(searchkey: searchText).receive(on: DispatchQueue.main).sink(receiveCompletion: { Completion in
+                switch Completion{
+                    case .finished:
+                        print("finshed recive")
+                    case .failure(let error):
+                        print(error)
                 }
-                if let error = error {
-                    print(error)
-                }
-            }
+            }, receiveValue: { value in
+                self.arrayOfproducts = value
+                self.confirmView.isHidden = CoreDataManager.sharedInstance.isCartEmpty() ? true:false
+                self.productsTable.reloadData()
+            }).store(in: &observers)
         }
 
     }

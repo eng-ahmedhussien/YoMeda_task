@@ -7,9 +7,10 @@
 
 import Foundation
 import CoreData
+import Combine
 
 class ProductVM{
-    
+
     //MARK: - network functions
     var productsArray: [Complaint]? {
         didSet{
@@ -26,13 +27,29 @@ class ProductVM{
     init(ApiService: NetworkManager = NetworkManager()) {
         self.ApiService = ApiService
     }
-    func fetchData(searchkey:String){
-        ApiService.networkPost(completion: { products, error in
-            if let products = products{
-                self.productsArray = products
-            }else{
-                self.error = error
-            }
-        }, searchkey: searchkey)
+//    func fetchData(searchkey:String){
+//        ApiService.networkPost(completion: { products, error in
+//            if let products = products{
+//                self.productsArray = products
+//            }else{
+//                self.error = error
+//            }
+//        }, searchkey: searchkey)
+//    }
+    
+    //MARK: - combine
+    func fetchData(searchkey:String)-> Future<[Complaint],Error>{
+        return Future { data in
+            self.ApiService.networkPost(completion: { products, error in
+                if let products = products{
+                    data(.success(products))
+                   // self.productsArray = products
+                }else{
+                    data(.failure(error!))
+                   // self.error = error
+                }
+            }, searchkey: searchkey)
+        }
     }
+    
 }
